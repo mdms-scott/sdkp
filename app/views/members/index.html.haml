@@ -1,7 +1,8 @@
 .container
   -unless @members.empty?
     %ul.member_list
-      = render :partial => 'member', :colletion => @members
+      = render :partial => 'member', :collection => @members
   -else
     %p
       No Members.
+  = link_to 'Add a member', new_member_path

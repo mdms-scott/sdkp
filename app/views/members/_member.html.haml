@@ -1,2 +1,9 @@
-= @member.name
-= @member.link
+%li
+  %p
+    = member.name
+  %p
+    = member.link
+  %p
+    = link_to 'Edit', edit_member_path(member)
+    = "/"
+    = link_to 'Delete', member_path(member), :method => 'delete', :confirm => "Are you sure you want to delete #{member.name}?"

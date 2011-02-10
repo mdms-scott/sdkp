@@ -7,7 +7,6 @@ class MembersController < ApplicationController
   def index
     @title = "Member List"
     @members = Member.all
-    respond_with @members
   end
   
   def show

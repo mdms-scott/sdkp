@@ -1,0 +1,21 @@
+= form_for(@member) do |f|
+  = f.error_messages
+  %fieldset
+    %legend
+      Information
+    %p
+      = f.label :name
+      %br
+      = f.text_field :name
+    %p
+      = f.label :class
+      %br
+      = f.select :class, Member::CLASSES, :prompt => "Select a class"
+    %p
+      = f.label :link, "Link to armory profile"
+      %br
+      = f.text_field :link
+  %p
+    = f.submit
+    or
+    %a.cancel_link{ :href => members_path } Cancel
