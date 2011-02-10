@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20110210210202) do
   create_table "members", :force => true do |t|
     t.string "name"
     t.string "link"
-    t.string "class"
+    t.string "pclass"
   end
 
 end

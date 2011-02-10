@@ -3,7 +3,7 @@ class CreateMembers < ActiveRecord::Migration
     create_table :members do |t|
       t.string :name
       t.string :link
-      t.string :class
+      t.string :pclass
 
     end
   end

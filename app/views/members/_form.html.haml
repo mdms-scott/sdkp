@@ -8,9 +8,9 @@
       %br
       = f.text_field :name
     %p
-      = f.label :class
+      = f.label :pclass
       %br
-      = f.select :class, Member::CLASSES, :prompt => "Select a class"
+      = f.select :pclass, Member::PCLASSES, :prompt => "Select a class"
     %p
       = f.label :link, "Link to armory profile"
       %br
