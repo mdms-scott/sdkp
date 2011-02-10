@@ -1,0 +1,11 @@
+%li
+  %p
+    = item.member.name
+  %p
+    = item.name
+  %p
+    = item.link
+  %p
+    = link_to 'Edit', edit_item_path(item)
+    = "/"
+    = link_to 'Delete', item_path(item), :method => 'delete', :confirm => "Are you sure you want to delete this loot entry?"

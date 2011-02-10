@@ -1,0 +1,31 @@
+= form_for(@item) do |f|
+  = f.error_messages
+  %fieldset
+    %legend
+      Information
+    %p
+      = f.label :member_id, "Member"
+      %br
+      - @members = Member.find(:all).map { |u| [u.name, u.id]}
+      = f.select :member_id, @members
+    %p
+      = f.label :name
+      %br
+      = f.text_field :name
+    %p
+      = f.label :link, "Link to Wowhead entry"
+      %br
+      = f.text_field :link
+    %p
+      = f.label :spec
+      %br
+      = f.select :spec, Item::SPECS, :prompt => "Select a Spec"
+    %p
+      = f.label :boss
+      %br
+      = f.select :boss, Item::BOSSES, :prompt => "Select a boss"
+
+  %p
+    = f.submit
+    or
+    %a.cancel_link{ :href => items_path } Cancel

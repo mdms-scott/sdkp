@@ -13,4 +13,6 @@ class Member < ActiveRecord::Base
   
   PCLASSES = ['Warrior', 'Paladin', 'Death Knight', 'Rogue', 'Hunter', 'Mage', 'Warlock', 'Druid', 'Priest', 'Shaman']
   
+  has_many :items
+  
 end

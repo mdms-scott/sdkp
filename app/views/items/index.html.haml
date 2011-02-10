@@ -1,0 +1,8 @@
+.container
+  -unless @items.empty?
+    %ul.item_list
+      = render :partial => 'item', :collection => @items
+  -else
+    %p
+      No Loot entries present.
+  = link_to 'Create a Loot Entry', new_item_path
