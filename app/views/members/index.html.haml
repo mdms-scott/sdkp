@@ -1,0 +1,7 @@
+.container
+  -unless @members.empty?
+    %ul.member_list
+      = render :partial => 'member', :colletion => @members
+  -else
+    %p
+      No Members.
