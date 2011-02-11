@@ -1,15 +1,23 @@
 - unless member.items.empty?
-  %ul
+  %article
     - @item = member.items.last
-    %li
+    %section.position
       = member.position
-    %li
+    %section.name{:class => member.pclass}
       = member.name
-    %li
+    %section.item
       %a{ :href => @item.link } #{@item.name}
-    %li
+    %section.boss
       = @item.boss
-    %li
+    %section.date
       = @item.date.strftime('%b %d, %Y - %l:%M %p')
 -else
-  #{member.name} has not yet received any loot.
+  %article
+    %section.position
+      = member.position
+    %section.name{:class => member.pclass}
+      = member.name
+    %section.noloot
+      has not yet received any loot.
+    
+%br

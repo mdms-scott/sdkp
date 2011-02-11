@@ -1,0 +1,83 @@
+body {
+  background-color: #101010;
+  font-family: helvetica;
+  font-size: 22px; }
+
+#binder {
+  background-color: #484848;
+  margin: 0 auto;
+  width: 1000px;
+  border: 3px solid white;
+  -moz-border-radius: 5px;
+  padding: 10px; }
+
+.container {
+  margin: 0 auto; }
+
+article {
+  display: block;
+  display: -moz-box;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -moz-box-align: center;
+  -moz-boz-pack: center;
+  height: 50px;
+  border-top: 1px dashed #666666; }
+
+article:first-of-type {
+  border-top: 0px; }
+
+article:last-of-type {
+  border-bottom: 1px dashed black; }
+
+section {
+  display: block;
+  -moz-box-flex: 0;
+  width: 150px;
+  text-align: center;
+  padding-top: 10px; }
+
+section.boss, section.item, section.date, section.noloot {
+  -moz-box-flex: 1; }
+
+.name {
+  font-weight: bold; }
+
+.boss {
+  color: #ffd100; }
+
+/** CLASS FONT COLORS ** */
+.DeathKnight {
+  color: #c41f3b; }
+
+.Druid {
+  color: #ff7d0a; }
+
+.Hunter {
+  color: #abd473; }
+
+.Mage {
+  color: #69ccf0; }
+
+.Paladin {
+  color: #f58cba; }
+
+.Priest {
+  color: white; }
+
+.Rogue {
+  color: #fff569; }
+
+.Shaman {
+  color: #0070de; }
+
+.Warlock {
+  color: #9482c9; }
+
+.Warrior {
+  color: #c79c6e; }
+
+.item a {
+  text-decoration: none;
+  color: #a335ee;
+  font-weight: bold; }

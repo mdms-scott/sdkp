@@ -1,8 +1,5 @@
-Home
-
 .container
-  %ul
-    = render :partial => 'member', :collection => @members
+  = render :partial => 'member', :collection => @members.sort_by(&:position)
 
 %p
   = link_to "Member List", members_path
