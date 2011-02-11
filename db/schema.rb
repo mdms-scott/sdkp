@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20110210220232) do
 
   create_table "items", :force => true do |t|
     t.string   "name"
-    t.string   "spec"
+    t.boolean  "spec"
     t.string   "link"
     t.string   "boss"
     t.integer  "member_id"

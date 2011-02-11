@@ -5,7 +5,7 @@
 #
 #  id        :integer(4)      not null, primary key
 #  name      :string(255)
-#  spec      :string(255)
+#  spec      :boolean(1)
 #  link      :string(255)
 #  boss      :string(255)
 #  member_id :integer(4)

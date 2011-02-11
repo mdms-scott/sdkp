@@ -22,6 +22,9 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(params[:item])
     if @item.save
+      if @item.spec = "Main"
+        @item.member.reposition(Member.all)
+      end
       flash[:notice] = "Successfully added a loot entry."
       respond_with @item, :location => items_path
     else

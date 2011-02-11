@@ -2,6 +2,8 @@
   %ul
     - @item = member.items.last
     %li
+      = member.position
+    %li
       = member.name
     %li
       %a{ :href => @item.link } #{@item.name}

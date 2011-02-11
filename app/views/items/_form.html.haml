@@ -17,9 +17,9 @@
       %br
       = f.text_field :link
     %p
-      = f.label :spec
+      = f.label :spec, "Check if Off Spec"
       %br
-      = f.select :spec, Item::SPECS, :prompt => "Select a Spec"
+      = f.check_box :spec
     %p
       = f.label :boss
       %br
