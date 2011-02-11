@@ -1,10 +1,9 @@
 %li
-  %p
-    = item.member.name
-  %p
-    = item.name
-  %p
-    = item.link
+  %ul
+    %li
+      = item.member.name
+    %li
+      %a{ :href => item.link } #{item.name}
   %p
     = link_to 'Edit', edit_item_path(item)
     = "/"

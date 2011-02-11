@@ -2,8 +2,8 @@ class CreateMembers < ActiveRecord::Migration
   def self.up
     create_table :members do |t|
       t.string :name
-      t.string :link
       t.string :pclass
+      t.integer :position
 
     end
   end

@@ -1,8 +1,8 @@
 Sdkp::Application.routes.draw do
-  get "home/index"
+  get "static/home"
   
   resources :members
   resources :items
 
-  root :to => "home#index"
+  root :to => "static#home"
 end

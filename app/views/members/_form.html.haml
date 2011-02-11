@@ -11,10 +11,6 @@
       = f.label :pclass
       %br
       = f.select :pclass, Member::PCLASSES, :prompt => "Select a class"
-    %p
-      = f.label :link, "Link to armory profile"
-      %br
-      = f.text_field :link
   %p
     = f.submit
     or

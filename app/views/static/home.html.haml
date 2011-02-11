@@ -1,0 +1,10 @@
+Home
+
+.container
+  %ul
+    = render :partial => 'member', :collection => @members
+
+%p
+  = link_to "Member List", members_path
+  %br
+  = link_to "Loot Entries", items_path

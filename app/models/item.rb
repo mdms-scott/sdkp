@@ -3,14 +3,13 @@
 #
 # Table name: items
 #
-#  id         :integer(4)      not null, primary key
-#  name       :string(255)
-#  spec       :string(255)
-#  link       :string(255)
-#  boss       :string(255)
-#  member_id  :integer(4)
-#  created_at :datetime
-#  updated_at :datetime
+#  id        :integer(4)      not null, primary key
+#  name      :string(255)
+#  spec      :string(255)
+#  link      :string(255)
+#  boss      :string(255)
+#  member_id :integer(4)
+#  date      :datetime
 #
 
 class Item < ActiveRecord::Base
@@ -19,6 +18,6 @@ class Item < ActiveRecord::Base
   
   SPECS = ["Main", "Off"]
   
-  BOSSES = ["Magmaw", "Theralion & Valliona"]
+  BOSSES = ["Magmaw", "Omnitron Defense System", "Ascendant Council", "Cho'Gal", "Halfus Wyrmbreaker", "Valiona & Theralion", "Maloriak", "Atramedes", "Chimaeron", "Nefarian", "Lady Sinestra"]
   
 end

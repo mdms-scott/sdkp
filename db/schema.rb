@@ -18,14 +18,13 @@ ActiveRecord::Schema.define(:version => 20110210220232) do
     t.string   "link"
     t.string   "boss"
     t.integer  "member_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "date"
   end
 
   create_table "members", :force => true do |t|
-    t.string "name"
-    t.string "link"
-    t.string "pclass"
+    t.string  "name"
+    t.string  "pclass"
+    t.integer "position"
   end
 
 end

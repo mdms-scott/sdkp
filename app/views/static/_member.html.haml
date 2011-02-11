@@ -1,0 +1,13 @@
+- unless member.items.empty?
+  %ul
+    - @item = member.items.last
+    %li
+      = member.name
+    %li
+      %a{ :href => @item.link } #{@item.name}
+    %li
+      = @item.boss
+    %li
+      = @item.date.strftime('%b %d, %Y - %l:%M %p')
+-else
+  #{member.name} has not yet received any loot.

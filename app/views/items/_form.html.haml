@@ -24,6 +24,10 @@
       = f.label :boss
       %br
       = f.select :boss, Item::BOSSES, :prompt => "Select a boss"
+    %p
+      = f.label :date
+      %br
+      = f.datetime_select :date, {:order => [:month, :day, :year, :hour, :minute]}
 
   %p
     = f.submit

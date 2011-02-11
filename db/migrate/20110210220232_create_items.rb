@@ -6,8 +6,8 @@ class CreateItems < ActiveRecord::Migration
       t.string :link
       t.string :boss
       t.integer :member_id
+      t.datetime :date
 
-      t.timestamps
     end
   end
 
