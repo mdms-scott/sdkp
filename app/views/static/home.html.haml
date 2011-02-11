@@ -1,7 +1,2 @@
 .container
   = render :partial => 'member', :collection => @members.sort_by(&:position)
-
-%p
-  = link_to "Member List", members_path
-  %br
-  = link_to "Loot Entries", items_path

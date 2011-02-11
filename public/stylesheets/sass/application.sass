@@ -27,9 +27,6 @@ article
 article:first-of-type
   border-top: 0px
 
-article:last-of-type
-  border-bottom: 1px dashed #000
-  
 section
   display: block
   -moz-box-flex: 0
@@ -39,6 +36,11 @@ section
 
 section.boss, section.item, section.date, section.noloot
   -moz-box-flex: 1
+  
+.position
+  font-weight: bold
+  font-size: 50px
+  color: #cff
   
 .name
   font-weight: bold
@@ -73,4 +75,22 @@ section.boss, section.item, section.date, section.noloot
     text-decoration: none
     color: #A335EE
     font-weight: bold
-    
+
+/*** FOOTER ***/
+
+footer
+  .cont
+    margin: 15px auto
+    background-color: #484848
+    text-align: center
+    width: 500px
+    border: 2px solid #fff
+    height: 30px
+    padding-top: 8px
+
+ul
+  list-style: none
+  margin: 0px
+  padding: 0px
+  li
+    display: inline
