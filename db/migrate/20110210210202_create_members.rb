@@ -3,7 +3,7 @@ class CreateMembers < ActiveRecord::Migration
     create_table :members do |t|
       t.string :name
       t.string :pclass
-      t.integer :position
+      t.integer :position, :default => "0"
 
     end
   end

@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20110210220232) do
   create_table "members", :force => true do |t|
     t.string  "name"
     t.string  "pclass"
-    t.integer "position"
+    t.integer "position", :default => 0
   end
 
 end
