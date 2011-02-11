@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(params[:item])
     if @item.save
-      if @item.spec = "Main"
+      unless @item.spec
         @item.member.reposition(Member.all)
       end
       flash[:notice] = "Successfully added a loot entry."
