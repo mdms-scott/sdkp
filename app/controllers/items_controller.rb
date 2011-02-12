@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
         @item.member.reposition(Member.all)
       end
       flash[:notice] = "Successfully added a loot entry."
-      respond_with @item, :location => items_path
+      redirect_to root_url
     else
       flash[:alert] = "Failed to add a new loot entry."
       render :action => :new
