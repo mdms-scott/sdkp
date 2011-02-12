@@ -1,7 +1,2 @@
 %li
-  %p
-    %a{ :href => "http://us.battle.net/wow/en/character/arthas/#{member.name.downcase}/simple"} #{member.name}
-  %p
-    = link_to 'Edit', edit_member_path(member)
-    = "/"
-    = link_to 'Delete', member_path(member), :method => 'delete', :confirm => "Are you sure you want to delete #{member.name}?"
+  %a{ :href => "http://us.battle.net/wow/en/character/arthas/#{member.name.downcase}/simple", :class => member.pclass} #{member.name}

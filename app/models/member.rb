@@ -17,6 +17,10 @@ class Member < ActiveRecord::Base
   
   after_create :initial
   
+  validates_presence_of :name, :on => :create, :message => "can't be blank"
+  validates_uniqueness_of :name, :on => :create, :message => "must be unique"
+  validates_presence_of :pclass, :on => :create, :message => "must select a class"
+  
   # Finds and returns the highest position any member currently holds
   def self.highest
     pos = Member.first.position

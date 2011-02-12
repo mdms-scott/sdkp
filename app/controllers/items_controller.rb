@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
   def index
     @title = "All Loot Entries"
     @members = Member.all
-    @items = Item.all
+    @items = Item.paginate :page => params[:page], :order => 'date DESC'
   end
 
   def show

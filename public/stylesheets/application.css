@@ -9,6 +9,7 @@ body {
   width: 1000px;
   border: 3px solid white;
   -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   padding: 10px; }
 
 .container {
@@ -17,10 +18,14 @@ body {
 article {
   display: block;
   display: -moz-box;
+  display: -webkit-box;
   width: 100%;
   -moz-box-sizing: border-box;
   -moz-box-align: center;
-  -moz-boz-pack: center;
+  -moz-box-pack: center;
+  -webkit-box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
   height: 50px;
   border-top: 1px dashed #666666; }
 
@@ -30,12 +35,14 @@ article:first-of-type {
 section {
   display: block;
   -moz-box-flex: 0;
+  -webkit-box-flex: 0;
   width: 150px;
   text-align: center;
   padding-top: 10px; }
 
 section.boss, section.item, section.date, section.noloot {
-  -moz-box-flex: 1; }
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1; }
 
 .position {
   font-weight: bold;
@@ -84,6 +91,9 @@ section.boss, section.item, section.date, section.noloot {
   color: #a335ee;
   font-weight: bold; }
 
+.date {
+  color: white; }
+
 /** FOOTER ** */
 footer .cont {
   margin: 15px auto;
@@ -92,11 +102,49 @@ footer .cont {
   width: 500px;
   border: 2px solid white;
   height: 30px;
-  padding-top: 8px; }
+  padding-top: 8px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
 
 ul {
   list-style: none;
   margin: 0px;
   padding: 0px; }
-  ul li {
-    display: inline; }
+
+ul.menu li {
+  display: inline;
+  margin: 0 5px; }
+  ul.menu li a {
+    text-decoration: none;
+    color: white; }
+  ul.menu li a:hover {
+    text-decoration: underline; }
+
+ul.member_list li {
+  margin: 3px;
+  padding: 3px; }
+  ul.member_list li a {
+    text-decoration: none; }
+  ul.member_list li a:hover {
+    text-decoration: underline; }
+
+/** PAGINATION ** */
+.pagination {
+  margin: 3px;
+  padding: 3px; }
+  .pagination a {
+    padding: 2px 5px;
+    margin: 2px;
+    text-decoration: none;
+    color: white; }
+  .pagination span.current {
+    padding: 2px 5px;
+    margin: 2px;
+    font-weight: bold; }
+  .pagination span.disabled {
+    padding: 2px 5px;
+    margin: 2px;
+    color: black; }
+
+.pag {
+  text-align: right; }

@@ -9,6 +9,7 @@ body
   width: 1000px
   border: 3px solid #fff
   -moz-border-radius: 5px
+  -webkit-border-radius: 5px
   padding: 10px
 
 .container
@@ -17,10 +18,14 @@ body
 article
   display: block
   display: -moz-box
+  display: -webkit-box
   width: 100%
   -moz-box-sizing: border-box
   -moz-box-align: center
-  -moz-boz-pack: center
+  -moz-box-pack: center
+  -webkit-box-sizing: border-box
+  -webkit-box-align: center
+  -webkit-box-pack: center
   height: 50px
   border-top: 1px dashed #666
 
@@ -30,12 +35,14 @@ article:first-of-type
 section
   display: block
   -moz-box-flex: 0
+  -webkit-box-flex: 0
   width: 150px
   text-align: center
   padding-top: 10px
 
 section.boss, section.item, section.date, section.noloot
   -moz-box-flex: 1
+  -webkit-box-flex: 1
   
 .position
   font-weight: bold
@@ -76,6 +83,9 @@ section.boss, section.item, section.date, section.noloot
     color: #A335EE
     font-weight: bold
 
+.date
+  color: #fff
+
 /*** FOOTER ***/
 
 footer
@@ -87,10 +97,48 @@ footer
     border: 2px solid #fff
     height: 30px
     padding-top: 8px
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
 
 ul
   list-style: none
   margin: 0px
   padding: 0px
+ul.menu
   li
     display: inline
+    margin: 0 5px
+    a
+      text-decoration: none
+      color: #fff
+    a:hover
+      text-decoration: underline
+ul.member_list
+  li
+    margin: 3px
+    padding: 3px
+    a
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+/*** PAGINATION ***/
+      
+.pagination
+  margin: 3px
+  padding: 3px
+  a
+    padding: 2px 5px
+    margin: 2px
+    text-decoration: none
+    color: #fff
+  span.current
+    padding: 2px 5px
+    margin: 2px
+    font-weight: bold
+  span.disabled
+    padding: 2px 5px
+    margin: 2px
+    color: #000
+.pag
+  text-align: right

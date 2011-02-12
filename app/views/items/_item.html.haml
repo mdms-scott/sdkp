@@ -1,10 +1,9 @@
-%li
-  %ul
-    %li
-      = item.member.name
-    %li
-      %a{ :href => item.link } #{item.name}
-  %p
-    = link_to 'Edit', edit_item_path(item)
-    = "/"
-    = link_to 'Delete', item_path(item), :method => 'delete', :confirm => "Are you sure you want to delete this loot entry?"
+%article
+  %section.name{:class => item.member.pclass}
+    = item.member.name
+  %section.item
+    %a{ :href => item.link } #{item.name}
+  %section.boss
+    = item.boss
+  %section.date
+    = item.date.strftime('%b %d, %Y - %l:%M %p')
