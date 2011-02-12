@@ -1,0 +1,15 @@
+= form_for @user do |f|
+  %p
+    = f.label :name, "Name"
+    %br
+    = f.text_field :name
+  %p
+    = f.label :password, "Password"
+    %br
+    = f.password_field :password
+  %p
+    = f.label :password_confirmation, "Password Confirmation"
+    %br
+    = f.password_field :password_confirmation
+  %p
+    = f.submit

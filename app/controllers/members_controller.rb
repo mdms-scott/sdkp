@@ -4,6 +4,8 @@ class MembersController < ApplicationController
   
   respond_to :html, :json
   
+  load_and_authorize_resource
+  
   def index
     @title = "Member List"
     @members = Member.all

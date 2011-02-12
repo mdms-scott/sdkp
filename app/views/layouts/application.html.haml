@@ -7,6 +7,8 @@
     = javascript_include_tag :all
   %body
     #binder
+      - if current_user
+        fuck you
       = yield
     = render :partial => 'layouts/footer'
       

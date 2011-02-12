@@ -1,7 +1,6 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    ZenTest (4.4.2)
     abstract (1.0.0)
     actionmailer (3.0.3)
       actionpack (= 3.0.3)
@@ -31,9 +30,9 @@ GEM
     activesupport (3.0.3)
     annotate-models (1.0.4)
     arel (2.0.8)
-    autotest (4.4.6)
-      ZenTest (>= 4.4.1)
+    bcrypt-ruby (2.1.2)
     builder (2.1.2)
+    cancan (1.5.1)
     capybara (0.3.9)
       culerity (>= 0.2.4)
       mime-types (>= 1.16)
@@ -110,7 +109,6 @@ GEM
       ffi (>= 0.6.1)
       json_pure
       rubyzip
-    spork (0.8.4)
     term-ansicolor (1.0.5)
     thor (0.14.6)
     treetop (1.4.9)
@@ -123,7 +121,8 @@ PLATFORMS
 
 DEPENDENCIES
   annotate-models
-  autotest
+  bcrypt-ruby
+  cancan
   capybara
   cucumber
   cucumber-rails
@@ -133,5 +132,4 @@ DEPENDENCIES
   rails (= 3.0.3)
   rspec
   rspec-rails
-  spork
   will_paginate (>= 3.0.pre)
