@@ -2,22 +2,30 @@
   %article
     - @item = member.items.last
     %section.position
-      = member.position
+      %p
+        = member.position
     %section.name{:class => member.pclass}
-      = member.name
+      %p
+        = member.name
     %section.item
-      %a{ :href => @item.link } #{@item.name}
+      %p
+        %a{ :href => @item.link } #{@item.name}
     %section.boss
-      = @item.boss
+      %p
+        = @item.boss
     %section.date
-      = @item.date.strftime('%b %d, %Y - %l:%M %p')
+      %p
+        = @item.date.strftime('%b %d, %Y - %l:%M %p')
 -else
   %article
     %section.position
-      = member.position
+      %p
+        = member.position
     %section.name{:class => member.pclass}
-      = member.name
+      %p
+        = member.name
     %section.noloot
-      has not yet received any loot.
+      %p  
+        has not yet received any loot.
     
-%br
+

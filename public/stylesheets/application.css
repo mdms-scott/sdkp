@@ -29,8 +29,11 @@ article {
   -webkit-box-sizing: border-box;
   -webkit-box-align: center;
   -webkit-box-pack: center;
-  height: 50px;
-  border-top: 1px dashed #666666; }
+  min-height: 50px;
+  height: auto;
+  border-bottom: 1px dashed #666666;
+  /* padding-bottom: 15px */
+  /* border: 1px solid #000 */ }
 
 article:first-of-type {
   border-top: 0px; }
@@ -41,10 +44,11 @@ section {
   -webkit-box-flex: 0;
   width: 150px;
   text-align: center;
-  padding-top: 10px; }
+  /* padding-top: 10px */
+  /* border: 1px solid #000 */ }
 
-section.name, section.boss, section.item, section.date, section.noloot {
-  padding-top: 15px; }
+section.position {
+  /* padding-top: 5px */ }
 
 section.boss, section.item, section.date, section.noloot {
   -moz-box-flex: 1;
@@ -60,6 +64,9 @@ section.boss, section.item, section.date, section.noloot {
 
 .boss {
   color: #ffd100; }
+
+section p {
+  height: 50px; }
 
 /** CLASS FONT COLORS ** */
 .DeathKnight {
