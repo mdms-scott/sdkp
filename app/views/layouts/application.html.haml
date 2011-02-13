@@ -9,6 +9,7 @@
     #binder
       = yield
     = render :partial => 'layouts/footer'
-    - if current_user
-      = render :partial => 'layouts/panel'
+    - unless User.all.empty?
+      - if current_user
+        = render :partial => 'layouts/panel'
       

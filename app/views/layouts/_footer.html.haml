@@ -7,9 +7,10 @@
         = link_to "Member List", members_path
       %li
         = link_to "Loot Entries", items_path
-      -if current_user
-        %li
-          = link_to "Log out", log_out_path
-      - else
-        %li
-          = link_to "Log in", log_in_path
+      - unless User.all.empty?
+        -if current_user
+          %li
+            = link_to "Log out", log_out_path
+        - else
+          %li
+            = link_to "Log in", log_in_path

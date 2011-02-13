@@ -43,6 +43,9 @@ section {
   text-align: center;
   padding-top: 10px; }
 
+section.name, section.boss, section.item, section.date, section.noloot {
+  padding-top: 15px; }
+
 section.boss, section.item, section.date, section.noloot {
   -moz-box-flex: 1;
   -webkit-box-flex: 1; }
