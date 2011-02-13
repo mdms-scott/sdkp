@@ -65,9 +65,6 @@ section.boss, section.item, section.date, section.noloot {
 .boss {
   color: #ffd100; }
 
-section p {
-  height: 50px; }
-
 /** CLASS FONT COLORS ** */
 .DeathKnight {
   color: #c41f3b; }
