@@ -35,8 +35,8 @@ article {
   /* padding-bottom: 15px */
   /* border: 1px solid #000 */ }
 
-article:first-of-type {
-  border-top: 0px; }
+article:last-of-type {
+  border-bottom: 0px; }
 
 section {
   display: block;
@@ -47,8 +47,9 @@ section {
   /* padding-top: 10px */
   /* border: 1px solid #000 */ }
 
-section.position {
-  /* padding-top: 5px */ }
+section.position p {
+  margin: 0px;
+  padding: 0px; }
 
 section.boss, section.item, section.date, section.noloot {
   -moz-box-flex: 1;
