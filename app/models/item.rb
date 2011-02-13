@@ -14,7 +14,7 @@
 
 class Item < ActiveRecord::Base
   
-  belongs_to :member
+  belongs_to :member, :dependent => :destroy
   
   cattr_reader :per_page
   
