@@ -51,6 +51,16 @@ class MembersController < ApplicationController
     respond_with @member
   end
   
+  def move_up_list
+    @member.uplist(@member)
+    @member.save!
+    redirect_to root_url
+  end
+  
+  def move_down_list
+    
+  end
+  
 private
   def find_member
     @member = Member.find(params[:id])

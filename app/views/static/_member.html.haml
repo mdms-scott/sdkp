@@ -1,6 +1,10 @@
 - unless member.items.empty?
   %article
     - @item = member.items.last
+    %section
+      %p
+        = link_to "UP", move_up_list_path(member), :method => 'move_up_list'
+    
     %section.position
       %p
         = member.position
