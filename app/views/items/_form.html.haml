@@ -3,33 +3,40 @@
   %fieldset
     %legend
       Information
-    %p
-      = f.label :member_id, "Member"
-      %br
-      - @members = Member.find(:all).map { |u| [u.name, u.id]}
-      = f.select :member_id, @members
-    %p
-      = f.label :name
-      %br
-      = f.text_field :name
-    %p
-      = f.label :link, "Link to Wowhead entry"
-      %br
-      = f.text_field :link
-    %p
-      = f.label :spec, "Check if Off Spec"
-      %br
-      = f.check_box :spec
-    %p
-      = f.label :boss
-      %br
-      = f.select :boss, Item::BOSSES, :prompt => "Select a boss"
-    %p
-      = f.label :date
-      %br
-      = f.datetime_select :date, {:order => [:month, :day, :year, :hour, :minute]}
+    %table
+      %tr
+        %td
+          = f.label :member_id, "Member"
+        %td
+          - @members = Member.find(:all).map { |u| [u.name, u.id]}
+          = f.select :member_id, @members
+      %tr
+        %td
+          = f.label :name
+        %td
+          = f.text_field :name
+      %tr
+        %td
+          = f.label :link, "Link to Wowhead entry"
+        %td
+          = f.text_field :link
+      %tr
+        %td
+          = f.label :spec, "Check if Off Spec"
+        %td
+          = f.check_box :spec
+      %tr
+        %td
+          = f.label :boss
+        %td
+          = f.select :boss, Item::BOSSES, :prompt => "Select a boss"
+      %tr
+        %td
+          = f.label :date
+        %td
+          = f.datetime_select :date, {:order => [:month, :day, :year, :hour, :minute]}
 
-  %p
+  .submit
     = f.submit
     or
     %a.cancel_link{ :href => root_path } Cancel
