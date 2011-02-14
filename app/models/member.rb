@@ -60,12 +60,12 @@ class Member < ActiveRecord::Base
   # Manually moves a member up the list by one position
   def uplist(member)
     pos = member.position
-    puts pos
-    you = Member.find_by_position(pos - 1)
-    puts you.position
-    member.position, you.position = you.position, member.position
-    member.save
-    you.save
+    unless pos == 1  
+      you = Member.find_by_position(pos - 1)
+      member.position, you.position = you.position, member.position
+      member.save
+      you.save
+    end
   end
   
   # Manually moves a member down the list by one position
