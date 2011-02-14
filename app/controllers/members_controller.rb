@@ -58,7 +58,9 @@ class MembersController < ApplicationController
   end
   
   def move_down_list
-    
+    @member.downlist(@member)
+    @member.save!
+    redirect_to root_url
   end
   
 private

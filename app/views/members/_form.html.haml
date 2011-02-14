@@ -3,15 +3,17 @@
   %fieldset
     %legend
       Information
-    %p
-      = f.label :name
-      %br
-      = f.text_field :name
-    %p
-      = f.label :pclass
-      %br
-      = f.select :pclass, Member::PCLASSES, :prompt => "Select a class"
-  %p
+    %ul.inline
+      %li
+        = f.label :name
+      %li
+        = f.text_field :name
+    %ul.inline
+      %li
+        = f.label :pclass, "Class"
+      %li
+        = f.select :pclass, Member::PCLASSES, :prompt => "Select a class"
+  .submit
     = f.submit
     or
     %a.cancel_link{ :href => root_path } Cancel

@@ -18,6 +18,16 @@ a {
 .container {
   margin: 0 auto; }
 
+ul.inline {
+  list-style: none;
+  margin-top: 5px; }
+  ul.inline li {
+    display: inline; }
+
+.submit {
+  text-align: center;
+  margin-top: 12px; }
+
 article {
   display: block;
   display: -moz-box;
@@ -61,6 +71,9 @@ section.boss, section.item, section.date, section.noloot {
 
 .boss {
   color: #ffd100; }
+
+.spec {
+  color: #0091ff; }
 
 /** CLASS FONT COLORS ** */
 .DeathKnight {
@@ -161,8 +174,7 @@ ul.member_list li {
 
 /** PANEL ** */
 #new_item, #edit_item, #new_member, #edit_member {
-  text-align: center;
-  width: 250px;
-  background-color: #999999;
-  padding: 15px;
-  margin: 10px; }
+  width: 500px;
+  background-color: #666666;
+  margin: 20px;
+  padding: 8px; }

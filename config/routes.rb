@@ -6,7 +6,8 @@ Sdkp::Application.routes.draw do
   get "static/home"
   get "panel/control"
   
-  match 'members/:id/move_up_list', :to => 'members#move_up_list', :as => 'move_up_list', :via => 'post'
+  match 'members/:id/move_up_list', :to => 'members#move_up_list', :as => 'move_up_list'
+  match 'members/:id/move_down_list', :to => 'members#move_down_list', :as => 'move_down_list'
   
   resources :members
   resources :items

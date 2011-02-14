@@ -1,10 +1,15 @@
 - unless member.items.empty?
   %article
     - @item = member.items.last
-    %section
-      %p
-        = link_to "UP", move_up_list_path(member), :method => 'move_up_list'
-    
+    - unless User.all.empty?
+      - if current_user
+        .arrows
+          .ab{:path => move_up_list_path(member), :method => 'move_up_list'}
+            .point.up
+            .back.up
+          .ab{:path => move_down_list_path(member), :method => 'move_down_list'}
+            .back.down
+            .point.down
     %section.position
       %p
         = member.position
@@ -31,5 +36,3 @@
     %section.noloot
       %p  
         has not yet received any loot.
-    
-

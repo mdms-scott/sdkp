@@ -70,7 +70,19 @@ class Member < ActiveRecord::Base
   
   # Manually moves a member down the list by one position
   def downlist(member)
-    
+    posit = member.position
+    puts posit
+    hig = Member.highest
+    puts hig
+    unless posit == hig
+      you = Member.find_by_position(posit + 1)
+      puts you.position
+      member.position, you.position = you.position, member.position
+      puts member.position
+      puts you.position
+      member.save
+      you.save
+    end
   end
   
 end
