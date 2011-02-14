@@ -11,15 +11,15 @@
 
 class Member < ActiveRecord::Base
   
-  PCLASSES = ['Warrior', 'Paladin', 'Death Knight', 'Rogue', 'Hunter', 'Mage', 'Warlock', 'Druid', 'Priest', 'Shaman']
-  
-  has_many :items
+  has_many :items, :dependent => :destroy
   
   after_create :initial
   
   validates_presence_of :name, :on => :create, :message => "can't be blank"
   validates_uniqueness_of :name, :on => :create, :message => "must be unique"
   validates_presence_of :pclass, :on => :create, :message => "must select a class"
+
+  PCLASSES = ['Warrior', 'Paladin', 'Death Knight', 'Rogue', 'Hunter', 'Mage', 'Warlock', 'Druid', 'Priest', 'Shaman']
   
   # Finds and returns the highest position any member currently holds
   def self.highest
@@ -47,7 +47,7 @@ class Member < ActiveRecord::Base
       high = Member.highest
       current = self.position
       Member.all.each do |member|
-        if member.position >= current
+        if member.position > current
           member.position = member.position - 1
           member.save
         end

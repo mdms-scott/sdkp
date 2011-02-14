@@ -46,6 +46,7 @@ class MembersController < ApplicationController
   end
   
   def destroy
+    @member.destroy
     flash[:notice] = "Successfully removed member." if @member.delete
     respond_with @member
   end

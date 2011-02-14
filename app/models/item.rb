@@ -14,16 +14,15 @@
 
 class Item < ActiveRecord::Base
   
-  belongs_to :member, :dependent => :destroy
+  belongs_to :member
   
   cattr_reader :per_page
   
   @@per_page = 10
   
+  validates_presence_of :member_id, :on => :create, :message => "Loot entries must be assigned to a member"
   validates_presence_of :name, :on => :create, :message => "can't be blank"
   validates_presence_of :boss, :on => :create, :message => "can't be blank"
-  
-  SPECS = ["Main", "Off"]
   
   BOSSES = ["Magmaw", "Omnitron Defense System", "Ascendant Council", "Cho'Gal", "Halfus Wyrmbreaker", "Valiona & Theralion", "Maloriak", "Atramedes", "Chimaeron", "Nefarian", "Lady Sinestra", "Conclave of Wind", "Al'Akir", "Trash Epic"]
   

@@ -31,9 +31,7 @@ article {
   -webkit-box-pack: center;
   min-height: 50px;
   height: auto;
-  border-bottom: 1px dashed #666666;
-  /* padding-bottom: 15px */
-  /* border: 1px solid #000 */ }
+  border-bottom: 1px dashed #666666; }
 
 article:last-of-type {
   border-bottom: 0px; }
@@ -43,9 +41,7 @@ section {
   -moz-box-flex: 0;
   -webkit-box-flex: 0;
   width: 150px;
-  text-align: center;
-  /* padding-top: 10px */
-  /* border: 1px solid #000 */ }
+  text-align: center; }
 
 section.position p {
   margin: 0px;

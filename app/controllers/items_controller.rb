@@ -50,6 +50,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item.destroy
     flash[:notice] = "Successfully removed loot entry." if @item.delete
     respond_with @item
   end
