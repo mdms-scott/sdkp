@@ -113,6 +113,9 @@ section.boss, section.item, section.date, section.noloot {
 
 .date {
   color: white; }
+  .date a {
+    color: white;
+    text-decoration: none; }
 
 /** FOOTER ** */
 footer .cont {

@@ -12,6 +12,7 @@ class MembersController < ApplicationController
   end
   
   def show
+    @items = @member.items
     respond_with @member
   end
   

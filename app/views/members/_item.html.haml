@@ -1,0 +1,12 @@
+%article
+  %section.item
+    %a{ :href => item.link } #{item.name}
+  %section.spec
+    - if item.spec
+      Off Spec
+    - else
+      Main Spec
+  %section.boss
+    = item.boss
+  %section.date
+    = item.date.strftime('%b %d, %Y - %l:%M %p')
