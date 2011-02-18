@@ -1,11 +1,10 @@
+/*** GENERAL STYLES ***/
+
 body
   background-color: #101010
   font-family: helvetica
   font-size: 22px
-
-a
-  text-decoration: none
-
+  
 #binder
   background-color: #484848
   margin: 0 auto
@@ -18,15 +17,44 @@ a
 .container
   margin: 0 auto
 
+/*** LINK STYLES ***/
+
+a
+  text-decoration: none
+
+/*** LIST STYLES ***/
+
 ul.inline
   list-style: none
   margin-top: 5px
   li
     display: inline
+    
+ul
+  list-style: none
+  margin: 0px
+  padding: 0px
 
-.submit
-  text-align: center
-  margin-top: 12px
+ul.menu
+  li
+    display: inline
+    margin: 0 5px
+    a
+      text-decoration: none
+      color: #fff
+    a:hover
+      text-decoration: underline
+
+ul.member_list
+  li
+    margin: 3px
+    padding: 3px
+    a
+      text-decoration: none
+    a:hover
+      text-decoration: underline
+
+/*** BOX STYLES ***/
   
 article
   display: block
@@ -53,29 +81,42 @@ section
   width: 150px
   text-align: center
   
-section.position
-  p
-    margin: 0px
-    padding: 0px
+/*** SECTION STYLES ***/
 
-section.boss, section.item, section.date, section.noloot
-  -moz-box-flex: 1
-  -webkit-box-flex: 1
-  
 .position
   font-weight: bold
   font-size: 50px
   color: #cff
-  
+  p
+    margin: 0px
+    padding: 0px
+
 .name
   font-weight: bold
+  
+section.boss, section.item, section.date, section.noloot
+  -moz-box-flex: 1
+  -webkit-box-flex: 1
+
+
+.item
+  a
+    text-decoration: none
+    color: #A335EE
+    font-weight: bold
 
 .boss
   color: #FFD100
-  
+
 .spec
   color: #0091ff
-  
+
+.date
+  color: #fff
+  a
+    color: #fff
+    text-decoration: none
+
 /*** CLASS FONT COLORS ***/
 .DeathKnight
   color: #C41F3B
@@ -97,18 +138,6 @@ section.boss, section.item, section.date, section.noloot
   color: #9482C9
 .Warrior
   color: #C79C6E
-  
-.item
-  a
-    text-decoration: none
-    color: #A335EE
-    font-weight: bold
-
-.date
-  color: #fff
-  a
-    color: #fff
-    text-decoration: none
 
 /*** FOOTER ***/
 
@@ -128,27 +157,6 @@ footer.sub
   .cont
     width: 450px
 
-ul
-  list-style: none
-  margin: 0px
-  padding: 0px
-ul.menu
-  li
-    display: inline
-    margin: 0 5px
-    a
-      text-decoration: none
-      color: #fff
-    a:hover
-      text-decoration: underline
-ul.member_list
-  li
-    margin: 3px
-    padding: 3px
-    a
-      text-decoration: none
-    a:hover
-      text-decoration: underline
 
 /*** PAGINATION ***/
       
@@ -171,7 +179,7 @@ ul.member_list
 .pag
   text-align: right
   
-/*** PANEL ***/
+/*** FORM STYLES ***/
 
 #new_item, #edit_item, #new_member, #edit_member
   background-color: #666
@@ -183,3 +191,7 @@ ul.member_list
 
 #new_member, #edit_member
   width: 500px
+  
+.submit
+  text-align: center
+  margin-top: 12px
