@@ -16,9 +16,16 @@ body {
 .container {
   margin: 0 auto; }
 
+.center {
+  text-align: center; }
+
 /** LINK STYLES ** */
 a {
+  color: white;
   text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
 
 /** LIST STYLES ** */
 ul.inline {
@@ -35,25 +42,12 @@ ul {
 ul.menu li {
   display: inline;
   margin: 0 5px; }
-  ul.menu li a {
-    text-decoration: none;
-    color: white; }
-  ul.menu li a:hover {
-    text-decoration: underline; }
 
 ul.member_list li {
   margin: 3px;
   padding: 3px; }
-  ul.member_list li a {
-    text-decoration: none; }
-  ul.member_list li a:hover {
-    text-decoration: underline; }
 
-/** FORM STYLES ** */
-.submit {
-  text-align: center;
-  margin-top: 12px; }
-
+/** BOX STYLES ** */
 article {
   display: block;
   display: -moz-box;
@@ -79,10 +73,7 @@ section {
   width: 150px;
   text-align: center; }
 
-section.boss, section.item, section.date, section.noloot {
-  -moz-box-flex: 1;
-  -webkit-box-flex: 1; }
-
+/** SECTION STYLES ** */
 .position {
   font-weight: bold;
   font-size: 50px;
@@ -94,11 +85,23 @@ section.boss, section.item, section.date, section.noloot {
 .name {
   font-weight: bold; }
 
+section.boss, section.item, section.date, section.noloot {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1; }
+
+.item a {
+  text-decoration: none;
+  color: #a335ee;
+  font-weight: bold; }
+
 .boss {
   color: #ffd100; }
 
 .spec {
   color: #0091ff; }
+
+.date {
+  color: white; }
 
 /** CLASS FONT COLORS ** */
 .DeathKnight {
@@ -130,17 +133,6 @@ section.boss, section.item, section.date, section.noloot {
 
 .Warrior {
   color: #c79c6e; }
-
-.item a {
-  text-decoration: none;
-  color: #a335ee;
-  font-weight: bold; }
-
-.date {
-  color: white; }
-  .date a {
-    color: white;
-    text-decoration: none; }
 
 /** FOOTER ** */
 footer .cont {
@@ -178,7 +170,7 @@ footer.sub .cont {
 .pag {
   text-align: right; }
 
-/** PANEL ** */
+/** FORM STYLES ** */
 #new_item, #edit_item, #new_member, #edit_member {
   background-color: #666666;
   margin: 20px;
@@ -189,3 +181,7 @@ footer.sub .cont {
 
 #new_member, #edit_member {
   width: 500px; }
+
+.submit {
+  text-align: center;
+  margin-top: 12px; }
