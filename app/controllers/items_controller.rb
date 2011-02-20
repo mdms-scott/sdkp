@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @title = "Creating a new loot entry"
     @item = Item.new
     respond_with @item
   end
@@ -36,6 +37,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @title = "Editing a loot entry"
     respond_with @item
   end
 

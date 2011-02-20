@@ -12,11 +12,13 @@ class MembersController < ApplicationController
   end
   
   def show
+    @title = "#{@member.name}'s Loot History"
     @items = @member.items
     respond_with @member
   end
   
   def new
+    @title = "Creating a new member"
     @member = Member.new
     respond_with @member
   end
@@ -33,6 +35,7 @@ class MembersController < ApplicationController
   end
   
   def edit
+    @title = "Editing #{@member.name}'s information"
     respond_with @member
   end
   

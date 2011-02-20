@@ -27,6 +27,14 @@
         = @item.date.strftime('%b %d, %Y - %l:%M %p')
 -else
   %article
+    - if current_user
+      .arrows
+        .ab{:path => move_up_list_path(member), :method => 'move_up_list'}
+          .point.up
+          .back.up
+        .ab{:path => move_down_list_path(member), :method => 'move_down_list'}
+          .back.down
+          .point.down
     %section.position
       %p
         = member.position
