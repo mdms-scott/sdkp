@@ -8,7 +8,7 @@
       %li
         = link_to "Loot Entries", items_path
       - unless User.all.empty?
-        -if current_user
+        -if signed_in?
           %li
             = link_to "Log out", log_out_path
         - else

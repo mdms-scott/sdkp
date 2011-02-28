@@ -5,13 +5,19 @@ gem 'rails', '3.0.3'
 gem 'mysql2'
 
 gem 'haml'
-gem 'annotate-models'
-gem 'rspec'
-gem 'rspec-rails'
-gem 'cucumber'
-gem 'cucumber-rails'
-gem 'will_paginate', '>=3.0.pre'
+gem 'will_paginate', '>=3.0.pre2'
 gem 'jquery-rails'
-gem 'capybara'
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'cancan'
+
+group :development do
+  gem 'rspec-rails'
+  gem 'annotate-models'
+  gem 'faker'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'webrat'
+  gem 'factory_girl_rails'
+end

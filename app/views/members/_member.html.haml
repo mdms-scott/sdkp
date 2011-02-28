@@ -1,6 +1,6 @@
 %li
   %a{ :href => member_path(member), :class => member.pclass} #{member.name}
-- if current_user
+- if signed_in?
   %li
     = link_to "Edit", edit_member_path(member)
     = '/'
