@@ -4,13 +4,17 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
+    @title = "Create Admin Account"
   end
   
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to root_url, :notice => "Created admin account"
+      sign_in @user
+      flash[:success] = "Created new admin account."
+      redirect_to root_url
     else
+      @title = "Create Admin Account"
       render "new"
     end
   end

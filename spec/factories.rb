@@ -1,5 +1,18 @@
 Factory.define :user do |user|
-  User.name "Admin"
-  User.password "password"
-  User.password_confirmation "password"
+  user.name "Admin"
+  user.password "password"
+  user.password_confirmation "password"
+end
+
+Factory.define :member do |member|
+  member.name "Test Member"
+  member.pclass "Priest"
+end
+
+Factory.define :item do |item|
+  item.name "Test Item"
+  item.link "#"
+  item.boss "Test Boss"
+  item.date Time.now
+  item.association :member
 end

@@ -24,7 +24,8 @@ describe StaticController do
     describe "when signed in" do
       
       before(:each) do
-        @user = 
+        @user = test_sign_in(Factory(:user))
+      end
       
     end # 'signed in'
     
