@@ -237,6 +237,35 @@ describe MembersController do
         
   end # DELETE 'destroy'
   
+  describe "position actions" do
+    
+    before(:each) do
+      @user = Factory(:user)
+      test_sign_in(@user)
+      @member = Factory(:member)
+      @other_member = Factory(:member, :name => "Other Member")
+    end
+    
+    describe "move up list" do
+      
+      before(:each) do
+        @member.downlist(@member)
+      end
+      it "should move the user up the list" do
+        post :move_up_list, :id => @member
+        @member.position.should == @other_member.position - 1
+      end
+    end # 'move up list'
+    
+    describe "move down list" do
+      lambda do
+        post :move_down_list, :id => @member
+        @member.position.should == @other_member.position + 1
+      end
+    end # 'move down list'
+    
+  end # 'position actions'
+  
   describe "authentication for new, create, edit, update, and delete pages" do
     
     before(:each) do
