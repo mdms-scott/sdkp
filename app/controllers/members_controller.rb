@@ -1,6 +1,7 @@
 class MembersController < ApplicationController
   
   before_filter :find_member, :except => ['index', 'new', 'create']
+  before_filter :authenticate, :except => ['index', 'show']
   
   respond_to :html, :json
   
@@ -26,10 +27,11 @@ class MembersController < ApplicationController
   def create
     @member = Member.new(params[:member])
     if @member.save
-      flash[:notice] = "Successfully added a member."
+      flash[:success] = "Successfully added a member."
       respond_with @member, :location => members_path
     else
       flash[:alert] = "Failed to add a new member."
+      @title = "Creating a new member"
       render :action => :new
     end
   end
@@ -41,10 +43,11 @@ class MembersController < ApplicationController
   
   def update
     if @member.update_attributes(params[:member])
-      flash[:notice] = "Successfully updated member information."
-      respond_with @member, :location => members_path
+      flash[:success] = "Successfully updated member information."
+      respond_with @member, :location => member_path(@member)
     else
       flash[:alert] = "Failed to update member information."
+      @title = "Editing member's information"
       render :action => :edit
     end
   end
@@ -52,7 +55,7 @@ class MembersController < ApplicationController
   def destroy
     @member.destroy
     flash[:notice] = "Successfully removed member." if @member.delete
-    respond_with @member
+    respond_with @member, :location => members_path
   end
   
   def move_up_list

@@ -15,9 +15,9 @@ class Member < ActiveRecord::Base
   
   after_create :initial
   
-  validates_presence_of :name, :on => :create, :message => "can't be blank"
+  validates_presence_of :name
   validates_uniqueness_of :name, :on => :create, :message => "must be unique"
-  validates_presence_of :pclass, :on => :create, :message => "must select a class"
+  validates_presence_of :pclass
 
   PCLASSES = ['Warrior', 'Paladin', 'Death Knight', 'Rogue', 'Hunter', 'Mage', 'Warlock', 'Druid', 'Priest', 'Shaman']
   
