@@ -248,25 +248,39 @@ describe MembersController do
     
     describe "move up list" do
       
-      before(:each) do
-        @member.downlist(@member)
-      end
       it "should move the user up the list" do
+        @member.downlist(@member)
         post :move_up_list, :id => @member
+        @member.reload
+        @other_member.reload
         @member.position.should == @other_member.position - 1
       end
+      
+      it "should redirect to the root path" do
+        post :move_up_list, :id => @member
+        response.should redirect_to(root_path)
+      end
+      
     end # 'move up list'
     
     describe "move down list" do
-      lambda do
+      it "should move the  user down the list" do
         post :move_down_list, :id => @member
+        @member.reload
+        @other_member.reload
         @member.position.should == @other_member.position + 1
       end
+      
+      it "should redirect to the root path" do
+        post :move_down_list, :id => @member
+        response.should redirect_to(root_path)
+      end
+      
     end # 'move down list'
     
   end # 'position actions'
   
-  describe "authentication for new, create, edit, update, and delete pages" do
+  describe "authentication for controller actions" do
     
     before(:each) do
       @member = Factory(:member)
@@ -297,6 +311,16 @@ describe MembersController do
       
       it "should deny access to 'destroy'" do
         delete :destroy, :id => @member
+        response.should redirect_to(log_in_path)
+      end
+      
+      it "should deny access to 'move_up_list'" do
+        post :move_up_list, :id => @member
+        response.should redirect_to(log_in_path)
+      end
+      
+      it "should deny access to 'move_down_list'" do
+        post :move_up_list, :id => @member
         response.should redirect_to(log_in_path)
       end
       
