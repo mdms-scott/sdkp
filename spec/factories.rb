@@ -1,5 +1,5 @@
 Factory.define :user do |user|
-  user.name "Admin"
+  user.name "admin"
   user.password "password"
   user.password_confirmation "password"
 end
