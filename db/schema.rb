@@ -14,16 +14,18 @@ ActiveRecord::Schema.define(:version => 20110212201246) do
 
   create_table "items", :force => true do |t|
     t.string   "name"
-    t.boolean  "spec"
-    t.string   "link"
     t.string   "boss"
-    t.integer  "member_id"
-    t.datetime "date"
+    t.integer  "itemid"
+    t.integer  "heroicid"
+    t.boolean  "heroic"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "items", ["name"], :name => "index_items_on_name"
 
   create_table "members", :force => true do |t|
     t.string  "name"
-    t.string  "pclass"
     t.integer "position", :default => 0
   end
 

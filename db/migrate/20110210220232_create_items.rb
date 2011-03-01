@@ -2,13 +2,15 @@ class CreateItems < ActiveRecord::Migration
   def self.up
     create_table :items do |t|
       t.string :name
-      t.boolean :spec
-      t.string :link
       t.string :boss
-      t.integer :member_id
-      t.datetime :date
+      t.integer :itemid
+      t.integer :heroicid
+      t.boolean :heroic
+      
+      t.timestamps
 
     end
+    add_index :items, :name
   end
 
   def self.down

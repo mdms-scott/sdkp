@@ -2,10 +2,7 @@
   = "Viewing #{@member.name}'s loot history:  "
 
 .container
-  - unless @member.items.empty?
-    = render :partial => 'members/item', :collection => @items
-  - else
-    = "This member has not yet received any loot.  Aww."
+
     
 .center
   = link_to "#{@member.name}'s armory profile", "http://us.battle.net/wow/en/character/arthas/#{@member.name.downcase}/simple"

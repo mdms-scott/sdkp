@@ -6,7 +6,6 @@ end
 
 Factory.define :member do |member|
   member.name "Test Member"
-  member.pclass "Priest"
 end
 
 Factory.define :item do |item|

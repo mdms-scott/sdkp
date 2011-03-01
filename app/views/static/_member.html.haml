@@ -2,7 +2,7 @@
   %article
     - @item = member.items.last
     - unless User.all.empty?
-      - if current_user
+      - if signed_in?
         .arrows
           .ab{:path => move_up_list_path(member), :method => 'move_up_list'}
             .point.up
@@ -13,7 +13,7 @@
     %section.position
       %p
         = member.position
-    %section.name{:class => member.pclass}
+    %section.name{:class => "warrior"}
       %p
         = member.name
     %section.item
@@ -27,7 +27,7 @@
         = @item.date.strftime('%b %d, %Y - %l:%M %p')
 -else
   %article
-    - if current_user
+    - if signed_in?
       .arrows
         .ab{:path => move_up_list_path(member), :method => 'move_up_list'}
           .point.up
@@ -38,7 +38,7 @@
     %section.position
       %p
         = member.position
-    %section.name{:class => member.pclass}
+    %section.name{:class => "warrior"}
       %p
         = member.name
     %section.noloot

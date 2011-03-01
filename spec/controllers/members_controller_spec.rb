@@ -52,14 +52,6 @@ describe MembersController do
       response.should have_selector("title", :content => @member.name)
     end
     
-    it "should show the member's loot entries" do
-      le1 = Factory(:item, :member => @member, :name => "Sword")
-      le2 = Factory(:item, :member => @member, :name => "Shield")
-      get :show, :id => @member
-      response.should have_selector("section.item", :content => le1.name)
-      response.should have_selector("section.item", :content => le2.name)
-    end
-    
   end # GET 'show'
   
   describe "GET 'new'" do
@@ -91,7 +83,7 @@ describe MembersController do
     describe "failure" do
       
       before(:each) do
-        @attr = { :name => "", :pclass => "" }
+        @attr = { :name => "" }
       end
       
       it "should not create a member" do
@@ -115,7 +107,7 @@ describe MembersController do
     describe 'success' do
       
       before(:each) do
-        @attr = { :name => "New Member", :pclass => "Warrior" }
+        @attr = { :name => "New Member" }
       end
       
       it "should create a member" do
@@ -175,7 +167,7 @@ describe MembersController do
     describe "failure" do
       
       before(:each) do
-        @attr = { :name => "", :pclass => "" }
+        @attr = { :name => "" }
       end
       
       it "should render the edit page" do
@@ -193,14 +185,13 @@ describe MembersController do
     describe "success" do
       
       before(:each) do
-        @attr = { :name => "New Member", :pclass => 'Paladin' }
+        @attr = { :name => "New Member" }
       end
       
       it "should change the member's attributes" do
         put :update, :id => @member, :member => @attr
         @member.reload
         @member.name.should == @attr[:name]
-        @member.pclass.should == @attr[:pclass]
       end
       
       it "should redirect to the member show page" do

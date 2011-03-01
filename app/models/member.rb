@@ -1,23 +1,19 @@
 # == Schema Information
-# Schema version: 20110210220232
+# Schema version: 20110212201246
 #
 # Table name: members
 #
 #  id       :integer(4)      not null, primary key
 #  name     :string(255)
-#  pclass   :string(255)
 #  position :integer(4)      default(0)
 #
 
 class Member < ActiveRecord::Base
   
-  has_many :items, :dependent => :destroy
-  
   after_create :initial
   
   validates_presence_of :name
-  validates_uniqueness_of :name, :on => :create, :message => "must be unique"
-  validates_presence_of :pclass
+  validates :name, :length => { :within => 3..16 }, :uniqueness => { :case_sensitive => false }
 
   PCLASSES = ['Warrior', 'Paladin', 'Death Knight', 'Rogue', 'Hunter', 'Mage', 'Warlock', 'Druid', 'Priest', 'Shaman']
   

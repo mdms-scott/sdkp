@@ -14,7 +14,6 @@ class MembersController < ApplicationController
   
   def show
     @title = "#{@member.name}'s Loot History"
-    @items = @member.items
     respond_with @member
   end
   
