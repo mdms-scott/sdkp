@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(:version => 20110212201246) do
     t.string   "boss"
     t.integer  "itemid"
     t.integer  "heroicid"
-    t.boolean  "heroic"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

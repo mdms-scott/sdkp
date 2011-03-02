@@ -7,8 +7,7 @@ describe Item do
       :name => "Test Item",
       :boss => "Magmaw",
       :itemid => "13579",
-      :heroicid => "246810",
-      :heroic => false
+      :heroicid => "246810"
     }
   end
   

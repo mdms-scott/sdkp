@@ -5,7 +5,6 @@ class CreateItems < ActiveRecord::Migration
       t.string :boss
       t.integer :itemid
       t.integer :heroicid
-      t.boolean :heroic
       
       t.timestamps
 

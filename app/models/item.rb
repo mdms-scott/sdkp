@@ -19,7 +19,7 @@ class Item < ActiveRecord::Base
   
   @@per_page = 10
   
-  BOSSES = ["Magmaw", "Omnitron Defense System", "Ascendant Council", "Cho'Gal", "Halfus Wyrmbreaker", "Valiona & Theralion", "Maloriak", "Atramedes", "Chimaeron", "Nefarian", "Lady Sinestra", "Conclave of Wind", "Al'Akir", "Trash Epic"]
+  BOSSES = ["Magmaw", "Omnitron Defense System", "Ascendant Council", "Cho'Gal", "Halfus Wyrmbreaker", "Valiona & Theralion", "Maloriak", "Atramedes", "Chimaeron", "Nefarian", "Lady Sinestra", "Conclave of Wind", "Al'Akir", "Trash Epic", "Tier Token"]
   
   validates :name, :uniqueness => { :case_sensitive => false }, :presence => true
   validates :boss, :presence => true, :inclusion => { :in => BOSSES }
